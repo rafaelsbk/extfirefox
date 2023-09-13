@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Soma",
+  "version": "1.0",
+  "description": "Uma descrição da minha extensão",
+  "permissions": ["tabs","activeTab"],
+  "browser_action": {
+    "default_popup": "soma.html",
+    "default_icon": {
+      "16": "images/icon-16.png"
+    }
+  },
+  "icons": {
+    "16": "images/icon-16.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
